@@ -244,10 +244,10 @@ const stringSession = "1BAAOMTQ5LjE1NC4xNjcuOTEAUCXkhkoTTCMLJ3K53SrJ+WMop7tl6gME
                 return;
             }
 
-            const action = message ? .action;
+            const action = message?.action;
             if (!action) return;
 
-            const gift = action ? .gift;
+            const gift = action?.gift;
             if (!gift || gift.className !== "StarGiftUnique") return;
 
             const giftOwnerId = gift.ownerId;
