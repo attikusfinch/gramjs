@@ -491,7 +491,7 @@ export async function _fileToMedia(
         }
         media = new Api.InputMediaUploadedDocument({
             file: fileHandle,
-            mimeType: mimeType,
+            mimeType: mimeType || "application/octet-stream",
             attributes: attributes,
             thumb: uploadedThumb,
             forceFile: forceDocument && !isImage,

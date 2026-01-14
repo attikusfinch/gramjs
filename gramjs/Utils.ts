@@ -942,7 +942,7 @@ export function getInputMedia(
             });
             return new Api.InputMediaUploadedDocument({
                 file: media,
-                mimeType: mimeType,
+                mimeType: mimeType || "application/octet-stream",
                 attributes: attrs,
                 forceFile: forceDocument,
             });
